@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
-
 import NavBar from './components/NavBar';
-
-import logo from './assets/Credits.svg';
+import MainTitle from './components/MainTitle';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: null,
+    };
+  }
+  
+  renderData() {
+    return(this.state.data);
+  }
+
   render() {
     return (
       <div className="App">
         <NavBar />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
+        <MainTitle className="AppTitle" />
       </div>
     );
   }
